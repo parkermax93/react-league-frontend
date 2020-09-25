@@ -1,13 +1,13 @@
 import React from 'react';
-import logo from '../logo.svg';
+import bg from '../images/bg.jpg'
 import { Link } from "react-router-dom";
 
 const Home = () => {
     return(
     <div className="App">
     <header className="App-header">
-    <img src={logo} className="App-logo" alt="logo" />
-     <p>
+    <img src={bg} className="App-logo" alt="bg" />
+    <p>
      Write stuff about league here.
     </p>
     <Link to="/characters">

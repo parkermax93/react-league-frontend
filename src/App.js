@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Home from './components/Home'
+import Characters from './components/Characters'
 import { Route, Switch } from "react-router-dom";
 
 
@@ -10,13 +11,13 @@ function App() {
       <Route exact path="/">
         <Home />
       </Route>
-      {/* <Route path="/characters">
+      <Route path="/characters">
         <Characters />
       </Route>
-      <Route path="/characters/:id">
+      {/* <Route exact path="/characters/:id">
         <Show />
       </Route>
-      <Route>
+      <Route path="*">
         <NoMatch />
       </Route> */}
     </Switch>
