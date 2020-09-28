@@ -8,6 +8,7 @@ import thunk from 'redux-thunk'
 const reducer = combineReducers({
     myCharacters,
     //comments?
+    //likes?
 })
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
