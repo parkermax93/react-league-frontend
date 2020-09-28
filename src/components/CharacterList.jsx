@@ -1,37 +1,53 @@
 import React, { Component } from 'react';
+import { Link } from "react-router-dom";
 
-const URL = 'localhost:3001/characters'
+const URL = 'http://localhost:3001/characters'
 
-const getCharacters = () => {
-this.state.characters.map((character) => <li>{character.name}</li>)
+class CharacterList extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+          error: null,
+          isLoaded: false,
+          characters: []
+        };
+      }
+      componentDidMount() {
+        fetch("http://localhost:3001/characters")
+          .then(res => res.json())
+          .then(
+            (result) => {
+              this.setState({
+                isLoaded: true,
+                characters: result.data
+              });
+            },
+            (error) => {
+              this.setState({
+                isLoaded: true,
+                error
+              });
+            }
+          )
+      }
+      render() {
+        const { error, characters } = this.state;
+        if (error) {
+          return <div>Error: {error.message}</div>;
+        } else {
+          return (
+            <ul>
+              {characters.map(character => (
+                <li key={character.id}>
+                    <Link to= {`/characters/${character.id}`}>
+                        {character.attributes.name}
+                    </Link>
+                </li>
+              ))}
+            </ul>
+          );
+        }
+      }
 }
-
-
-class CharacterListContainer extends Component {
-    state = {
-		characters: [],
-    }
-
-    render() {
-
-        return (
-            <div className="character-list">
-                <ul>
-                    {getCharacters()}
-                </ul> 
-            </div>
-        )
-
-    }
-    componentDidMount() {
-        fetch(`${URL}`)
-            .then(res => res.json())
-            .then(json => {
-                this.setState({
-                    characters: json.results
-                })
-                debugger
-            })
-    }
-}
-export default CharacterListContainer
+export default CharacterList
