@@ -2,19 +2,16 @@ import React from 'react';
 import bg from '../../images/bg.jpg'
 import { Link } from "react-router-dom";
 
-const Home = () => {
+const ShowCharacter = () => {
     return(
-    <div className="App">
-    <header className="App-header">
-    <img src={bg} className="App-logo" alt="bg" />
+    <div className="CharacterCard">
     <p>
-     About program here.
+Character Card goes here.
     </p>
     <Link to="/characters">
         Click To View All Champions
     </Link>
-    </header>
     </div>
     )
 }
-export default Home
+export default ShowCharacter

@@ -7,6 +7,7 @@ import {
 import Home from './components/containers/Home'
 import Characters from './components/containers/Characters'
 import NavBar from './components/NavBar';
+import ShowCharacter from './components/containers/ShowCharacter'
 // import { Route, Switch } from "react-router-dom";
 
 
@@ -18,7 +19,7 @@ const App = (props) => {
         <NavBar />
         <Route exact path='/' component={Home} />
         <Route exact path='/Characters' component={Characters} />
-        {/* <Route path='/Characters/:id' component={} /> */}
+        <Route path='/Characters/:id' component={ShowCharacter} />
         </div>
     </Router>
   );
