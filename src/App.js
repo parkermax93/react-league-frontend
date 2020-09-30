@@ -18,8 +18,8 @@ const App = (props) => {
 
         <NavBar />
         <Route exact path='/' component={Home} />
-        <Route exact path='/Characters' component={Characters} />
-        <Route path='/Characters/:id' component={ShowCharacter} />
+        <Route exact path='/characters' component={Characters} />
+        <Route path='/characters/:id' component={ShowCharacter} />
         </div>
     </Router>
   );

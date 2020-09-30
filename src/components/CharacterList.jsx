@@ -14,7 +14,7 @@ class CharacterList extends Component {
         };
       }
       componentDidMount() {
-        fetch("http://localhost:3001/characters")
+        fetch(URL)
           .then(res => res.json())
           .then(
             (result) => {

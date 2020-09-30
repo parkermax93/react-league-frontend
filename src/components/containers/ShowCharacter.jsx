@@ -1,16 +1,15 @@
 import React from 'react';
-import bg from '../../images/bg.jpg'
 import { Link } from "react-router-dom";
+import CharacterCard from '../CharacterCard.jsx';
+import CharactersLink from '../CharactersLink.jsx'
 
 const ShowCharacter = () => {
     return(
     <div className="CharacterCard">
     <p>
-Character Card goes here.
+        <CharacterCard />
+        <CharactersLink />
     </p>
-    <Link to="/characters">
-        Click To View All Champions
-    </Link>
     </div>
     )
 }

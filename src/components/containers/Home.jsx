@@ -1,6 +1,6 @@
 import React from 'react';
 import bg from '../../images/bg.jpg'
-import { Link } from "react-router-dom";
+import CharactersLink from '../CharactersLink.jsx'
 
 const Home = () => {
     return(
@@ -10,9 +10,10 @@ const Home = () => {
     <p>
      About program here.
     </p>
-    <Link to="/characters">
+    {/* <Link to="/characters">
         Click To View All Champions
-    </Link>
+    </Link> */}
+    <CharactersLink />
     </header>
     </div>
     )
