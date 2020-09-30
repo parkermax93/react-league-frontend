@@ -10,9 +10,6 @@ const Home = () => {
     <p>
      About program here.
     </p>
-    {/* <Link to="/characters">
-        Click To View All Champions
-    </Link> */}
     <CharactersLink />
     </header>
     </div>
