@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
+import { connect } from 'react-redux'
+import { setAllCharacters } from '../reducers/myCharacters.jsx'
 
 const URL = 'http://localhost:3001/characters'
 
@@ -18,10 +20,9 @@ class CharacterList extends Component {
           .then(res => res.json())
           .then(
             (result) => {
-              this.setState({
-                isLoaded: true,
-                characters: result.data
-              });
+              this.props.setAllCharacters(
+                result.data
+              );
             },
             (error) => {
               this.setState({
@@ -32,7 +33,8 @@ class CharacterList extends Component {
           )
       }
       render() {
-        const { error, characters } = this.state;
+        const { error } = this.state;
+        const { characters } = this.props;
         if (error) {
           return <div>Error: {error.message}</div>;
         } else {
@@ -50,4 +52,16 @@ class CharacterList extends Component {
         }
       }
 }
-export default CharacterList
+
+const mapStateToProps = state => {
+  return {
+    characters: state.allCharacters
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    setAllCharacters:(characters) => dispatch(setAllCharacters(characters))
+  }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(CharacterList)

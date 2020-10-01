@@ -1,15 +1,11 @@
-import { createStore, applyMiddleware, compose, combineReducers } from 'redux'
-import myCharacters from './reducers/myRecipes'
+import { createStore, applyMiddleware, compose } from 'redux'
+import myCharacters from './reducers/myCharacters'
 
 
 
 import thunk from 'redux-thunk'
 
-const reducer = combineReducers({
-    myCharacters,
-    //comments?
-    //likes?
-})
+const reducer = myCharacters
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
