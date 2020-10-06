@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import { connect } from 'react-redux'
 import { setAllCharacters } from '../reducers/myCharacters.jsx'
+import { fetchCharacters } from '../actions/CharactersActions.jsx'
 
 const URL = 'http://localhost:3001/characters'
 
@@ -16,21 +17,22 @@ class CharacterList extends Component {
         };
       }
       componentDidMount() {
-        fetch(URL)
-          .then(res => res.json())
-          .then(
-            (result) => {
-              this.props.setAllCharacters(
-                result.data
-              );
-            },
-            (error) => {
-              this.setState({
-                isLoaded: true,
-                error
-              });
-            }
-          )
+        this.props.fetchCharacters();
+        // fetch(URL)
+        //   .then(res => res.json())
+        //   .then(
+        //     (result) => {
+        //       this.props.setAllCharacters(
+        //         result.data
+        //       );
+        //     },
+        //     (error) => {
+        //       this.setState({
+        //         isLoaded: true,
+        //         error
+        //       });
+        //     }
+        //   )
       }
       render() {
         const { error } = this.state;
@@ -50,18 +52,26 @@ class CharacterList extends Component {
             </ul>
           );
         }
+        // return (
+        //   <div>
+
+        //   </div>
+        // )
       }
 }
 
 const mapStateToProps = state => {
+  // console.log(state)
   return {
-    characters: state.allCharacters
+    // characters: state.allCharacters
+    characters: state.characters
   }
 }
 
-const mapDispatchToProps = dispatch => {
-  return {
-    setAllCharacters:(characters) => dispatch(setAllCharacters(characters))
-  }
-}
-export default connect(mapStateToProps, mapDispatchToProps)(CharacterList)
+// const mapDispatchToProps = dispatch => {
+//   return {
+//     setAllCharacters:(characters) => dispatch(setAllCharacters(characters))
+//   }
+// }
+// export default connect(mapStateToProps, mapDispatchToProps)(CharacterList)
+export default connect(mapStateToProps, {fetchCharacters})(CharacterList)

@@ -6,10 +6,8 @@ import CharactersLink from '../CharactersLink.jsx'
 const ShowCharacter = () => {
     return(
     <div className="CharacterCard">
-    <p>
         <CharacterCard />
         <CharactersLink />
-    </p>
     </div>
     )
 }
