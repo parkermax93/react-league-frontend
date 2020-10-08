@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { connect } from 'react-redux'
 import { setAllCharacters } from '../reducers/myCharacters.jsx'
 import { fetchCharacters } from '../actions/CharactersActions.jsx'
+import LinkToCharacters from './LinkToCharacters.jsx';
 
 const URL = 'http://localhost:3001/characters'
 
@@ -43,11 +44,12 @@ class CharacterList extends Component {
           return (
             <ul>
               {characters.map(character => (
-                <li key={character.id}>
-                    <Link to= {`/characters/${character.id}`}>
-                        {character.attributes.name}
-                    </Link>
-                </li>
+                <LinkToCharacters character= {character} />
+                // <li key={character.id}>
+                //     <Link to= {`/characters/${character.id}`}>
+                //         {character.attributes.name}
+                //     </Link>
+                // </li>
               ))}
             </ul>
           );

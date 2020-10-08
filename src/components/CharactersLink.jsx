@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 const CharactersLink = () => {
     return(
         <div>
-    <Link to="/characters">
-        Click To View All Champions
-    </Link>
-    </div>
+            <Link to="/characters">
+                Click To View All Champions
+            </Link>
+        </div>
     )
 }
 
