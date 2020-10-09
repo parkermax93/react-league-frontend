@@ -5,7 +5,6 @@ const gotCharacters = (characters) => {
 
 export const fetchCharacters = () => {
     return(dispatch) => {
-        // debugger
         dispatch({type: "FETCHING_CHARACTERS"})
         fetch("http://localhost:3001/characters")
         .then((res) => res.json())

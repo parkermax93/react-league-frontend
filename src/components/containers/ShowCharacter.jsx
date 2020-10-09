@@ -1,6 +1,6 @@
 import React, { Component }  from 'react';
 import CharacterCard from '../CharacterCard.jsx';
-import CharactersLink from '../CharactersLink.jsx'
+import CharactersLink from '../CharactersLink.jsx';
 
 class ShowCharacter extends Component {
     constructor(props) {

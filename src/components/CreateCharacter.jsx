@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import { createCharacters } from "../actions/CharactersActions.jsx";
 
-function CharacterInput(props) {
+function CharacterCreate(props) {
     const [name, setName] = useState("");
     const [image_url, setImage_URL] = useState("");
     const [lane, setLane] = useState("");
@@ -15,7 +15,9 @@ function CharacterInput(props) {
             lane: lane,
             description: description
         }
+        
         props.createCharacters(character)
+
         setName("");
         setImage_URL("");
         setLane("");
@@ -58,4 +60,4 @@ function CharacterInput(props) {
         </div>
     )
 }
-export default connect(null, { createCharacters })(CharacterInput)
+export default connect(null, { createCharacters })(CharacterCreate)
