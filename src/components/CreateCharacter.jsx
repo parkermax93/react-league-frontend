@@ -7,6 +7,7 @@ function CharacterCreate(props) {
     const [image_url, setImage_URL] = useState("");
     const [lane, setLane] = useState("");
     const [description, setDescription] = useState("");
+    
     const handleSubmit = e => {
         e.preventDefault();
         const character = {

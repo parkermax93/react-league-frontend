@@ -1,6 +1,7 @@
 import React, { Component }  from 'react';
 import CharacterCard from '../CharacterCard.jsx';
 import CharactersLink from '../CharactersLink.jsx';
+import HomeButton from '../HomeButton.jsx';
 
 class ShowCharacter extends Component {
     constructor(props) {
@@ -39,6 +40,7 @@ class ShowCharacter extends Component {
                 <header className="App-header">
                     <CharacterCard character= {this.state.character}/>
                     <CharactersLink />
+                    <HomeButton />
                 </header>
             </div>
         )
