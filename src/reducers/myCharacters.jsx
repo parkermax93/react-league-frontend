@@ -29,7 +29,6 @@ export default function characterReducer(
             case "FETCHING_CHARACTERS":
                 return {...state, loading: true}
             case "ADDED_CHARACTER":
-                // debugger
                 return {...state, characters: [...state.characters, action.payload.data]}
             default:
                 return state;

@@ -14,3 +14,23 @@ export const fetchCharacters = () => {
         })
     }
 }
+
+export const createCharacters = (character) => {
+    return(dispatch) => {
+        const configObj ={
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json"
+            },
+            body: JSON.stringify(character)
+        };
+        fetch("http://localhost:3001/characters", configObj)
+        .then((res) => res.json())
+        .then((newCharacter) => {
+            debugger
+            dispatch(addCharacter(newCharacter))});
+    }
+}
+
+const addCharacter = (character) => ({type: "ADDED_CHARACTER", payload: character})

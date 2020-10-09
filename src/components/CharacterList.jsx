@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
 import { connect } from 'react-redux'
-import { setAllCharacters } from '../reducers/myCharacters.jsx'
 import { fetchCharacters } from '../actions/CharactersActions.jsx'
 import LinkToCharacters from './LinkToCharacters.jsx';
 
-const URL = 'http://localhost:3001/characters'
 
 class CharacterList extends Component {
 

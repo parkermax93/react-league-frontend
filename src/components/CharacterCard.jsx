@@ -2,42 +2,12 @@ import React, { Component } from 'react';
 import { withRouter } from "react-router";
 
 class CharacterCard extends Component {
-
-    constructor(props) {
-        super(props);
-
-        this.state = {
-          error: null,
-          isLoaded: false,
-          character: null,
-        };
-      }
-
-      componentDidMount() {
-          const id = this.props.match.params.id;
-          const url = `http://localhost:3001/characters/${id}`
-        fetch(url)
-          .then(res => res.json())
-          .then(
-            (result) => {
-              this.setState({
-                isLoaded: true,
-                character: result.data
-              });
-            },
-            (error) => {
-              this.setState({
-                isLoaded: true,
-                error
-              });
-            }
-          )
-      }
       render() {
-            const { error, character } = this.state;
+            const { error, character } = this.props;
+            // debugger
             if (error) {
               return <div>Error: {error.message}</div>;
-            } else if (this.state.character){
+            } else if (this.props.character){
               return (
                 <div>
                     <img src={character.attributes.image_url} alt={character.attributes.name}></img>
