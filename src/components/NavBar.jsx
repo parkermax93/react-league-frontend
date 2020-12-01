@@ -12,7 +12,7 @@ const link = {
 
 const NavBar = () => {
   return (
-    <div className="navbar">
+    <ul className="navbar">
       <NavLink to="/"
       exact
       style={link}
@@ -28,7 +28,7 @@ const NavBar = () => {
         background: 'darkblue'
       }}
       >Characters</NavLink>
-    </div>
+    </ul>
   );
 };
 export default NavBar;

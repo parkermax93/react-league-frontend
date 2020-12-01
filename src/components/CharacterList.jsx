@@ -11,7 +11,7 @@ class CharacterList extends Component {
         this.state = {
           error: null,
           isLoaded: false,
-          characters: []
+          // characters: [] does not do anything in my current itteration of code 
         };
       }
       componentDidMount() {

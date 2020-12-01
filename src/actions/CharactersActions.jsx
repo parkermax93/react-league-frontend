@@ -24,10 +24,12 @@ export const createCharacters = (character) => {
             },
             body: JSON.stringify(character)
         };
-        fetch("http://localhost:3001/characters", configObj)
+        console.log("c")
+        fetch("http://localhost:3001/characters", configObj) 
+        // number of p rq
         .then((res) => res.json())
         .then((newCharacter) => {
-            debugger
+            console.log("d")
             dispatch(addCharacter(newCharacter))});
     }
 }

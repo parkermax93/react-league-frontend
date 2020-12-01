@@ -16,9 +16,11 @@ function CharacterCreate(props) {
             lane: lane,
             description: description
         }
-        
-        props.createCharacters(character)
 
+        console.log("a")
+        props.createCharacters(character)
+        console.log("b")
+        
         setName("");
         setImage_URL("");
         setLane("");
