@@ -24,12 +24,9 @@ export const createCharacters = (character) => {
             },
             body: JSON.stringify(character)
         };
-        console.log("c")
         fetch("http://localhost:3001/characters", configObj) 
-        // number of p rq
         .then((res) => res.json())
         .then((newCharacter) => {
-            console.log("d")
             dispatch(addCharacter(newCharacter))});
     }
 }

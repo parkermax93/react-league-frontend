@@ -4,7 +4,6 @@ import { withRouter } from "react-router";
 class CharacterCard extends Component {
       render() {
             const { error, character } = this.props;
-            // debugger
             if (error) {
               return <div>Error: {error.message}</div>;
             } else if (this.props.character){
