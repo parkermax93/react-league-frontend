@@ -8,6 +8,7 @@ function CharacterCreate(props) {
     const [lane, setLane] = useState("");
     const [description, setDescription] = useState("");
     
+    
     const handleSubmit = e => {
         e.preventDefault();
         const character = {
@@ -26,12 +27,15 @@ function CharacterCreate(props) {
         setLane("");
         setDescription("");
     }
+    const BarStyling = {width:"20rem",background:"#F2F1F9", border:"none", padding:"0.5rem"};
     return (
         <div className="character-form">
             <h3> Create a character! </h3>
             <form onSubmit={handleSubmit}>
                 <label>Name:</label>
                 <input 
+                    style={BarStyling}
+                    placeholder="Name"
                     name="name"
                     type="text"
                     onChange={(e) => setName(e.target.value)}
@@ -39,6 +43,8 @@ function CharacterCreate(props) {
                 /><br/>
                 <label> Image URL: </label>
                 <input
+                    style={BarStyling}
+                    placeholder="Image URL"
                     name="image_url"
                     type="text"
                     onChange={(e)=> setImage_URL(e.target.value)}
@@ -46,6 +52,8 @@ function CharacterCreate(props) {
                 /><br/>
                 <label>Lane: </label>
                 <input
+                    style={BarStyling}
+                    placeholder="Lane"
                     name="lane"
                     type="text"
                     onChange={(e)=> setLane(e.target.value)}
@@ -53,6 +61,8 @@ function CharacterCreate(props) {
                 /><br/>
                 <label>Description:</label>
                 <input
+                    style={BarStyling}
+                    placeholder="Description"
                     name="description"
                     type="text"
                     onChange={(e)=> setDescription(e.target.value)}
