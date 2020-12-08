@@ -68,7 +68,11 @@ function CharacterCreate(props) {
                     onChange={(e)=> setDescription(e.target.value)}
                     value={description}
                 /><br></br>
-                <input type="submit" value="Create Character"/>
+                <input 
+                    variant="outline-primary"
+                    type="submit" 
+                    value="Create Character"
+                />
             </form>
         </div>
     )
