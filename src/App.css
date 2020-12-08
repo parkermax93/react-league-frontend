@@ -23,7 +23,11 @@
 }
 
 .App-visited {
-  color: #ffffff;
+  color: #d31414;
+}
+
+.Linked {
+  color: rgb(252, 252, 252)
 }
 
 .navbar {

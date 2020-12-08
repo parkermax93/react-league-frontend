@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const HomeLink = () => {
     return (
-        <div>
+        <div className="Linked">
             <Link to="/">Home</Link>
         </div>
     )
