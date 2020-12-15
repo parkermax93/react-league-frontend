@@ -32,10 +32,10 @@ function CharacterCreate(props) {
         <div className="character-form">
             <h3> Create a Champion! </h3>
             <form onSubmit={handleSubmit}>
-                <label>Name:</label>
+                <label>Champion Name:</label>
                 <input 
                     style={BarStyling}
-                    placeholder="Name"
+                    placeholder="Champion Name"
                     name="name"
                     type="text"
                     onChange={(e) => setName(e.target.value)}
