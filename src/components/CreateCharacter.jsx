@@ -30,7 +30,7 @@ function CharacterCreate(props) {
     const BarStyling = {width:"20rem",background:"#F2F1F9", border:"none", padding:"0.5rem"};
     return (
         <div className="character-form">
-            <h3> Create a character! </h3>
+            <h3> Create a Champion! </h3>
             <form onSubmit={handleSubmit}>
                 <label>Name:</label>
                 <input 
@@ -59,10 +59,10 @@ function CharacterCreate(props) {
                     onChange={(e)=> setLane(e.target.value)}
                     value={lane}
                 /><br/>
-                <label>Description:</label>
+                <label>Champion Description:</label>
                 <input
                     style={BarStyling}
-                    placeholder="Description"
+                    placeholder="Champion Description"
                     name="description"
                     type="text"
                     onChange={(e)=> setDescription(e.target.value)}
