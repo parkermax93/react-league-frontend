@@ -50,10 +50,10 @@ function CharacterCreate(props) {
                     onChange={(e)=> setImage_URL(e.target.value)}
                     value={image_url}
                 /><br/>
-                <label>Lane: </label>
+                <label>Champion Lane: </label>
                 <input
                     style={BarStyling}
-                    placeholder="Lane"
+                    placeholder="Champion Lane"
                     name="lane"
                     type="text"
                     onChange={(e)=> setLane(e.target.value)}
