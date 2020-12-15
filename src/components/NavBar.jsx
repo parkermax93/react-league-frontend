@@ -19,7 +19,7 @@ const NavBar = () => {
       activeStyle={{
         background: 'darkblue'
       }}
-      >Home</NavLink>
+      >Front Page</NavLink>
 
       <NavLink to="/characters"
       exact
