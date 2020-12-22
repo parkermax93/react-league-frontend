@@ -8,7 +8,6 @@ const Characters = () => {
     return(
         <div className="App">
             <header className="App-header">
-                <SearchBar />
                 <CharacterList />
                 <CharacterCreate />
                 <HomeButton />
