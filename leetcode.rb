@@ -22,3 +22,28 @@ class Solution(object):
 
     end
 end
+
+#Leetcode To Lower Case
+# @param {String} str
+# @return {String}
+def to_lower_case(str)
+  alp_down = [*'a'..'z']
+  alp_up = [*'A'..'Z']
+  new_str = ''
+  
+  i = 0
+  
+  while i < str.length
+      
+      if alp_up.include?(str[i]) 
+          index = alp_up.index(str[i])
+          new_str += alp_down[index]
+      else
+          new_str += str[i]
+      end
+      
+      i += 1
+  end
+  
+  new_str
+end
