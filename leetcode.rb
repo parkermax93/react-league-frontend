@@ -110,3 +110,9 @@ def count_consistent_strings(allowed, words)
   end
   count
 end
+#Richest Customer Wealth Leetcode
+# @param {Integer[][]} accounts
+# @return {Integer}
+def maximum_wealth(accounts)
+  accounts.map(&:sum).max
+end
