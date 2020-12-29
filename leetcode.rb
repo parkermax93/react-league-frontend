@@ -76,3 +76,19 @@ def sum_odd_length_subarrays(arr)
   end
   count
 end
+#Balance String Split Leetcode
+# @param {String} s
+# @return {Integer}
+def balanced_string_split(s)
+  l_count = 0
+  total = 0
+  for i in 0...s.length
+      if s[i]=='L'
+          l_count += 1
+      else
+          l_count -= 1
+      end
+      total += 1 if l_count==0
+  end
+  total
+end
