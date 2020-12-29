@@ -47,3 +47,18 @@ def to_lower_case(str)
   
   new_str
 end
+
+#Leetcode Shuffle String
+# @param {String} s
+# @param {Integer[]} indices
+# @return {String}
+def restore_string(s, indices)
+  strings = Array.new(s.length)
+  
+  indices.each_with_index do |i, idx|
+      strings[i] = s[idx]
+  end
+  
+  return strings.join
+end
+
