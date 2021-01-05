@@ -150,3 +150,25 @@ end
 def num_identical_pairs(nums)
   nums.each_with_index.reduce(0) { |sum, (el, i)| sum += nums[i+1..-1].count(el) }
 end
+#Goal Parser
+# @param {String} command
+# @return {String}
+def interpret(command)
+  s = ""
+  l = ""
+  command.each_char.with_index do |c, i|
+    if c == "G"
+      s += c
+    else
+      l += c
+      if l == "()"
+        s += "o"
+        l = ""
+      elsif l == "(al)"
+        s += "al"
+        l = ""
+      end
+    end
+  end
+  s
+end
