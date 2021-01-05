@@ -172,3 +172,17 @@ def interpret(command)
   end
   s
 end
+#Jewels and Stones
+# @param {String} jewels
+# @param {String} stones
+# @return {Integer}
+def num_jewels_in_stones(j, s)
+  
+  output = 0
+  
+  for i in 0...j.length do
+    output += s.count(j[i])    
+  end
+  
+  output
+end
