@@ -128,3 +128,13 @@ def shuffle(nums, n)
   end
   return ret_array
 end
+#Kids with Candy
+# @param {Integer[]} candies
+# @param {Integer} extra_candies
+# @return {Boolean[]}
+def kids_with_candies(candies, extra_candies)
+  highest_candy = candies.max
+  candies.map do |candy|
+    candy + extra_candies >= highest_candy
+  end
+end
