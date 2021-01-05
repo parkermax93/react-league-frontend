@@ -138,3 +138,9 @@ def kids_with_candies(candies, extra_candies)
     candy + extra_candies >= highest_candy
   end
 end
+#Defange IP Address
+# @param {String} address
+# @return {String}
+def defang_i_paddr(address)
+  address.gsub '.', '[.]'
+end
