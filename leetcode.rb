@@ -116,3 +116,15 @@ end
 def maximum_wealth(accounts)
   accounts.map(&:sum).max
 end
+#Shuffle the Array
+# @param {Integer[]} nums
+# @param {Integer} n
+# @return {Integer[]}
+def shuffle(nums, n)
+  ret_array = Array.new(n*2)
+  for i in 0...n
+      ret_array[i*2]=nums[i]
+      ret_array[i*2+1]=nums[i+n]
+  end
+  return ret_array
+end
