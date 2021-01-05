@@ -144,3 +144,9 @@ end
 def defang_i_paddr(address)
   address.gsub '.', '[.]'
 end
+#Number of Good Pairs
+# @param {Integer[]} nums
+# @return {Integer}
+def num_identical_pairs(nums)
+  nums.each_with_index.reduce(0) { |sum, (el, i)| sum += nums[i+1..-1].count(el) }
+end
