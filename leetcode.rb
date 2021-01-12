@@ -204,3 +204,19 @@ end
 def array_strings_are_equal(word1, word2)
   word1.join == word2.join
 end
+#Maximum Nesting Depth
+# @param {String} s
+# @return {Integer}
+def max_depth(s)
+  l, m = 0, 0
+  s.chars do |c|
+    if c == "("
+      l += 1
+      m = [m, l].max
+    elsif c == ")"
+      l -= 1
+      return 0 if l.negative?
+    end
+  end
+  return m
+end
