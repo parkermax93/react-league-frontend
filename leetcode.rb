@@ -186,3 +186,14 @@ def num_jewels_in_stones(j, s)
   
   output
 end
+#XOR Operation in an Array
+# @param {Integer} n
+# @param {Integer} start
+# @return {Integer}
+def xor_operation(n, start)
+  new_a = []
+  for i in 0...n do
+    new_a << start + 2*i
+  end
+  new_a.inject(:^)
+end
