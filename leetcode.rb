@@ -253,3 +253,10 @@ def count_good_triplets(arr, a, b, c)
   end
   count
 end
+
+#find even digits
+# @param {Integer[]} nums
+# @return {Integer}
+def find_numbers(nums)
+  nums.count { |x| x.digits.size.even? }
+end
