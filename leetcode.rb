@@ -299,3 +299,12 @@ def self_dividing_numbers(left, right)
   (left..right).each { |num| result << num if num.to_s.chars.all? { |digit| digit != '0' and num % digit.to_i == 0 }}
   return result
 end
+
+#number of students doing homework
+# @param {Integer[]} start_time
+# @param {Integer[]} end_time
+# @param {Integer} query_time
+# @return {Integer}
+def busy_student(start_time, end_time, query_time)
+  start_time.each_with_index.map { |st, i| st <= query_time && end_time[i] >= query_time ? 1 : 0 }.sum
+end
