@@ -260,3 +260,17 @@ end
 def find_numbers(nums)
   nums.count { |x| x.digits.size.even? }
 end
+
+#remove outermost parenthesis
+# @param {String} s
+# @return {String}
+def remove_outer_parentheses(s)
+  counter = 0
+  output = Array.new
+  s.split(//).each do |c|
+      output << c unless (counter == 0 && c == "(") || (counter == 1 && c == ")")
+      counter += 1 if c == "("
+      counter -= 1 if c == ")"
+  end
+  output.join
+end
