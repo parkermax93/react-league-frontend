@@ -274,3 +274,18 @@ def remove_outer_parentheses(s)
   end
   output.join
 end
+
+#final price w/ discount
+# @param {Integer[]} prices
+# @return {Integer[]}
+def final_prices(prices)
+  output = []
+  new_a = []
+  for i in 0...prices.size - 1
+    min = nil
+    prices[i+1..-1].select{|v| break min = v if v <= prices[i]}
+    min.nil? ? output << prices[i] : output << prices[i] - min
+  end
+  output << prices[-1]
+  p output
+end
