@@ -289,3 +289,13 @@ def final_prices(prices)
   output << prices[-1]
   p output
 end
+
+#self dividing mumbers
+# @param {Integer} left
+# @param {Integer} right
+# @return {Integer[]}
+def self_dividing_numbers(left, right)
+  result = []
+  (left..right).each { |num| result << num if num.to_s.chars.all? { |digit| digit != '0' and num % digit.to_i == 0 }}
+  return result
+end
