@@ -338,3 +338,23 @@ def three_consecutive_odds(arr)
   end
   false
 end
+#Find Words Formed By Characters
+# @param {String[]} words
+# @param {String} chars
+# @return {Integer}
+def count_characters(words, chars)
+  final = []
+  words.each do |i|
+    s = 0
+    i.each_char do |j|
+     break if i.count(j) > chars.count(j)
+     s+=1
+    end
+    final << i if s == i.length
+  end
+  product = 0
+  final.each do |i|
+   product += i.length
+  end
+  p product
+end
