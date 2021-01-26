@@ -317,3 +317,12 @@ def maximum69_number (num)
   new_a[new_a.index("6")] = "9" if new_a.index("6") != nil
   new_a.to_i
 end
+
+#Generate a String With Characters That Have Odd Counts
+# @param {Integer} n
+# @return {String}
+def generate_the_string(n)
+  result = 'a' * n
+  result[0] = 'b' if n.even?
+  result
+end
