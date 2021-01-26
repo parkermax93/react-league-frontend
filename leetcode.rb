@@ -308,3 +308,12 @@ end
 def busy_student(start_time, end_time, query_time)
   start_time.each_with_index.map { |st, i| st <= query_time && end_time[i] >= query_time ? 1 : 0 }.sum
 end
+
+#Maxiumum 69 Number
+# @param {Integer} num
+# @return {Integer}
+def maximum69_number (num)
+  new_a = num.to_s
+  new_a[new_a.index("6")] = "9" if new_a.index("6") != nil
+  new_a.to_i
+end
