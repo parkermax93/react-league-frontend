@@ -326,3 +326,15 @@ def generate_the_string(n)
   result[0] = 'b' if n.even?
   result
 end
+#Three Consecutive Odds
+# @param {Integer[]} arr
+# @return {Boolean}
+def three_consecutive_odds(arr)
+  return false if arr.length < 3
+  for i in 2..arr.length-1
+      if (arr[i]%2==1) and (arr[i-1]%2==1) and (arr[i-2]%2==1)
+          return true
+      end
+  end
+  false
+end
