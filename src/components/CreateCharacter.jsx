@@ -71,7 +71,7 @@ function CharacterCreate(props) {
                 <input 
                     variant="outline-primary"
                     type="submit" 
-                    value="Create Character"
+                    value="Create Champion"
                 />
             </form>
         </div>
