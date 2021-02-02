@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const HomeLink = () => {
     return (
         <div className="Linked">
-            <Link to="/">Front Page</Link>
+            <Link to="/">Home Page</Link>
         </div>
     )
 }
