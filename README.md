@@ -1,6 +1,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-##Description This project is a library of league of legends characters as well as certain facts and lore about them.
+## Description
+
+This project is a library of league of legends characters as well as certain facts and lore about them.
 
 ## Available Scripts
 
