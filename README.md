@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Description
 
-This project is a library of league of legends characters as well as certain facts and lore about them.
+This project is a library of league of legends characters as well as certain facts and lore about them. It uses a React/Redeux front end, with a Ruby on Rails hand designed backend, rather than an imported API.
 
 ## Available Scripts
 
