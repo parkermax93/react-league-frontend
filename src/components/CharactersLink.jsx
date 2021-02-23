@@ -5,7 +5,7 @@ const CharactersLink = () => {
     return(
         <div>
             <Link to="/characters">
-                Click To View All Champions
+                Click Here To View All Champions!
             </Link>
         </div>
     )
