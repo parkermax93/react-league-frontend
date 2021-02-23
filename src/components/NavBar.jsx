@@ -27,7 +27,7 @@ const NavBar = () => {
       activeStyle={{
         background: 'darkblue'
       }}
-      >Characters</NavLink>
+      >View All Champions</NavLink>
     </ul>
   );
 };
