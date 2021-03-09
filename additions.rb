@@ -37,3 +37,5 @@ const filterPosts = (posts, query) => {
     });
 };
 // end 
+    
+// js-search can do this type of thing as well
