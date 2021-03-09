@@ -24,3 +24,16 @@ export default SearchBar;
 const { search } = window.location;
 const query = new URLSearchParams(search).get('s');
 // end
+
+// Filter posts while searching
+const filterPosts = (posts, query) => {
+    if (!query) {
+        return posts;
+    }
+
+    return posts.filter((post) => {
+        const postName = post.name.toLowerCase();
+        return postName.includes(query);
+    });
+};
+// end 
