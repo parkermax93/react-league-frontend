@@ -23,3 +23,4 @@ export default SearchBar;
 // Change URL while searching
 const { search } = window.location;
 const query = new URLSearchParams(search).get('s');
+// end
