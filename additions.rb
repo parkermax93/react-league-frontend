@@ -19,3 +19,7 @@ const SearchBar = () => (
 export default SearchBar;
 
 // Search bar styling 
+
+// Change URL while searching
+const { search } = window.location;
+const query = new URLSearchParams(search).get('s');
