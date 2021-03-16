@@ -374,3 +374,14 @@ def count_largest_group(n)
   max = values.max
   values.count(max)
 end
+    
+#Remove Palindrome Subsequences(JAVA)
+class Solution {
+    public int removePalindromeSub(String s) {
+                String rev = new StringBuilder(s).reverse().toString();
+        if(rev.equals(s)){
+            return 1;
+        }
+        return 2;
+    }
+}    
