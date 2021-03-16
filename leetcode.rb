@@ -400,3 +400,17 @@ class Solution {
         return 1 - min;
     }
 }
+#Maxiumum Balls in Box (JAVA)
+class Solution {
+    public int minStartValue(int[] nums) {
+        int min = 0;
+        int sum = 0;
+        
+        for(int num: nums) {
+            sum += num;
+            min = Math.min(min, sum);
+        }
+        
+        return 1 - min;
+    }
+}    
